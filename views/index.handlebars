@@ -1,0 +1,56 @@
+<div class="container py-5">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">你想對誰說幹話?</h5>
+
+          <form method="POST" action="/">
+            <div class="col p-4">
+              <div class="row card-deck mb-3 align-text-bottom">
+                <div class="col-4 card text-center">
+                  <label class="card-body px-0">
+                    <img style="max-width: 100%"
+                      src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                      alt="">
+                  </label>
+                  <h5 class="card-footer"><input type="radio" name="listener" value="engineer"
+                      {{#if (keep listener 'engineer')}}checked{{/if}}>工程師</h5>
+                </div>
+
+                <div class="col-4 card text-center">
+                  <label class="card-body px-0">
+                    <img style="max-width: 100%"
+                      src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                      alt="">
+                  </label>
+                  <h5 class="card-footer"><input type="radio" name="listener" value="designer"
+                      {{#if (keep listener 'designer')}}checked{{/if}}>設計師</h5>
+                </div>
+
+                <div class="col-4 card text-center">
+                  <label class="card-body px-0">
+                    <img style="max-width: 100%"
+                      src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="">
+                  </label>
+                  <h5 class="card-footer"><input type="radio" name="listener" value="entrepreneur"
+                      {{#if (keep listener 'entrepreneur')}}checked{{/if}}>創業家</h5>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-secondary mb-4" type="submit">產生幹話</button>
+            {{#if trashTalk}}
+            <div class="alert alert-info" role="alert">
+              <h4 class="mr-2">{{trashTalk}}</h4>
+            </div>
+            {{/if}}
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
